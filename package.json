@@ -1,0 +1,23 @@
+{
+  "name": "threejs-cubemap-painter",
+  "version": "1.0.0",
+  "description": "Paints brightness/HDR values on a cubemap",
+  "main": "index.js",
+  "scripts": {
+    "test": "beefy test.js --live --open"
+  },
+  "author": "David Tran <davidt@jam3.com>",
+  "license": "ISC",
+  "dependencies": {
+    "threejs-hittest": "^3.1.0",
+    "threejs-light-probe": "^4.1.1",
+    "threejs-managed-view": "^4.0.3"
+  },
+  "devDependencies": {
+    "game-keyboard": "^0.1.0",
+    "input-unified-pointers": "^2.2.1",
+    "three": "^0.71.0",
+    "threejs-camera-controller-first-person-desktop": "^5.0.1",
+    "threejs-texture-checkerboard": "^1.0.0"
+  }
+}
