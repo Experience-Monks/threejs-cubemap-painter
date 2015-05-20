@@ -19,5 +19,9 @@
     "three": "^0.71.0",
     "threejs-camera-controller-first-person-desktop": "^5.0.1",
     "threejs-texture-checkerboard": "^1.0.0"
+  },
+  "repository": {
+    "type": "git",	
+    "url": "git://github.com/Jam3/threejs-cubemap-painter.git"
   }
 }
