@@ -4,11 +4,22 @@
   "description": "Paints brightness/HDR values on a cubemap",
   "main": "index.js",
   "scripts": {
-    "test": "beefy test.js --live --open"
+    "test": "node test.js"
   },
   "author": "David Tran <davidt@jam3.com>",
+  "contributors": [
+    {
+      "name": "Tomasz Dysinski",
+      "email": "oz@bunnybones.com"
+    }
+  ],
   "license": "ISC",
   "dependencies": {
+    "chalk": "^1.0.0",
+    "dat-gui-keyboard-helper": "^1.0.1",
+    "file-io-server": "^1.1.0",
+    "shelljs": "^0.5.0",
+    "threejs-cubemap-exporter": "^1.0.2",
     "threejs-hittest": "^3.1.0",
     "threejs-light-probe": "^4.1.1",
     "threejs-managed-view": "^4.0.3"
