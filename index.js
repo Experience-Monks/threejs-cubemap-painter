@@ -50,11 +50,30 @@ CubeMapPainter.prototype.drawScreenDot = function(x, y) {
 	
 	if (hits.length > 0)
 	{
-		var incident = hits[0].point.clone().sub(this.camera.position).normalize();
-		var normalWorld = hits[0].face.normal.clone().applyMatrix4(new THREE.Matrix4().extractRotation( hits[0].object.matrixWorld ));
-				
+		var hit = hits[0];
+		var hitObject = hit.object;
+		var hitFace = hit.face;
+		var vertices = hitObject.geometry.vertices;
+		var hitVerticesWorld = [hitFace.a, hitFace.b, hitFace.c].map(function(vertIndex) {
+			return vertices[vertIndex].clone().applyMatrix4(hitObject.matrixWorld);
+		});
+		var incident = hit.point.clone().sub(this.camera.position).normalize();
+		var normalWorld = hit.face.normal.clone().applyMatrix4(new THREE.Matrix4().extractRotation( hitObject.matrixWorld ));
+		
+		var bary = THREE.Triangle.barycoordFromPoint(hit.point, hitVerticesWorld[0], hitVerticesWorld[1], hitVerticesWorld[2]);
+
+		var hitVertexNormalsWorld = hit.face.vertexNormals.map(function(vertexNormal) {
+			return vertexNormal.clone().applyMatrix4(new THREE.Matrix4().extractRotation( hitObject.matrixWorld ));
+		});
+
+		var weightedVertexNormal = 
+			hitVertexNormalsWorld[0].multiplyScalar(bary.x).add(
+			hitVertexNormalsWorld[1].multiplyScalar(bary.y)).add(
+			hitVertexNormalsWorld[2].multiplyScalar(bary.z));
+
+		normalWorld = weightedVertexNormal;
 		var reflection = incident.reflect(normalWorld);
-		console.log(hits[0].face.normal);
+		console.log(hit.face.normal);
 		
 		this.brushPivot.lookAt(reflection);
 		// brushMesh.material.uniforms.color.value.setRGB(Math.random(), Math.random(), Math.random());
