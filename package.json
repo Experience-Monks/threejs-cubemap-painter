@@ -19,7 +19,7 @@
     "dat-gui-keyboard-helper": "^1.0.1",
     "file-io-server": "^1.1.0",
     "shelljs": "^0.5.0",
-    "threejs-cubemap-exporter": "^1.0.2",
+    "threejs-cubemap-exporter": "^1.0.3",
     "threejs-geometry-retractable-sphere": "^1.0.0",
     "threejs-hittest": "^3.1.0",
     "threejs-light-probe": "^4.1.1",
