@@ -3,7 +3,7 @@
   "version": "2.0.1",
   "description": "Paints brightness/HDR values on a cubemap",
   "main": "index.js",
-  "license": "ISC",
+  "license": "MIT",
   "scripts": {
     "test": "node test.js"
   },
