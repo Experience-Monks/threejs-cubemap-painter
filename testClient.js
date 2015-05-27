@@ -28,6 +28,8 @@ view.renderManager.onEnterFrame.add(function(){
 	);
 	
 	view.camera.lookAt(mesh.position);
+
+	painter.processQueue();
 });
 
 view.renderer.autoClear = false;
