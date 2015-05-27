@@ -1,9 +1,9 @@
 {
   "name": "threejs-cubemap-painter",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Paints brightness/HDR values on a cubemap",
   "main": "index.js",
-  "license": "MIT",
+  "license": "ISC",
   "scripts": {
     "test": "node test.js"
   },
@@ -18,7 +18,6 @@
       "email": "oz@bunnybones.com"
     }
   ],
-  "license": "ISC",
   "dependencies": {
     "threejs-geometry-retractable-sphere": "^1.0.1",
     "threejs-hittest": "^3.1.0"
@@ -35,7 +34,7 @@
     "type": "git",
     "url": "git://github.com/Jam3/threejs-cubemap-painter.git"
   },
-   "homepage": "https://github.com/Jam3/threejs-cubemap-painter",
+  "homepage": "https://github.com/Jam3/threejs-cubemap-painter",
   "bugs": {
     "url": "https://github.com/Jam3/threejs-cubemap-painter/issues"
   }
